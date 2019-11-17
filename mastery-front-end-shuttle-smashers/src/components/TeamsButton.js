@@ -1,8 +1,8 @@
 const Deact = require("../libs/deact");
 const Button = require("./button");
 const Http = require("../utils/http");
-const ArtistCard = require("./TeamCard");
-const ArtistPage = require("./TeamPage");
+const TeamCard = require("./TeamCard");
+const TeamPage = require("./TeamPage");
 
 function TeamsButton() {
     function renderTeams() {

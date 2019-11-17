@@ -16,8 +16,7 @@ function TeamForm() {
       },
       body: JSON.stringify({
         name: name,
-        recordLabel: recordLabel,
-        homeTown: homeTown,
+        gender: gender
       })
     })
       .then(response => {
@@ -37,17 +36,12 @@ function TeamForm() {
     ),
     Deact.create(
       "input",
-      { class: "team-image-url", placeholder: "Image Url", type: "text" },
+      { class: "flag-url", placeholder: "flag Url", type: "text" },
       ""
     ),
     Deact.create(
       "input",
-      { class: "team-record-label", placeholder: "Record Label", type: "text" },
-      ""
-    ),
-    Deact.create(
-      "input",
-      { class: "team-home-town", placeholder: "Home Town", type: "text" },
+      { class: "team-gender", placeholder: "Gender", type: "text" },
       ""
     ),
     Button({ type: "submit" }, "Submit")

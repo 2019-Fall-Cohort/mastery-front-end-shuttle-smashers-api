@@ -8,12 +8,12 @@ function PlayerButton(team) {
     function renderPlayers() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            PlayerPage(artist),
+            PlayerPage(team),
             document.querySelector(".content .container")
         );
         Http.getRequest(`http://localhost:8080/api/teams/${team.id}`,
             function (team) {
-                team.albums.forEach(function (player) {
+                team.player.forEach(function (player) {
                     Deact.render(
                         PlayerCard(player),
                         document.querySelector(".player-cards")
@@ -30,4 +30,4 @@ function PlayerButton(team) {
         "Players"
     );
 }
-module.exports = PlayersButton;
+module.exports = PlayerButton;
