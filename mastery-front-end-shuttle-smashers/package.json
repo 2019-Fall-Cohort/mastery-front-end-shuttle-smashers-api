@@ -1,5 +1,5 @@
 {
-  "name": "admin-frontend",
+  "name": "shuttle smashers-frontend",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time.git"
+    "url": "git+https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers-api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time/issues"
+    "url": "https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers.api/issues"
   },
-  "homepage": "https://github.com/2019-Fall-Cohort/admin-front-end-biscuit-time#readme",
+  "homepage": "https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers-api#readme",
   "directories": {
     "doc": "docs"
   },
