@@ -1,6 +1,6 @@
 const Deact = require("../libs/deact");
 const Title = require("./Title");
-const ArtistButton = require("./ArtistButton");
+const TeamButton = require("./TeamButton");
 const Nav = require("./Nav");
 
 async function Header() {
@@ -10,8 +10,8 @@ async function Header() {
             style: `background-color: pink; display: flex; justify-content: space-between; padding: 1rem;`
         },
         [
-            Title("black-text-color", "Biscuit Time!"),
-            Nav({}, [ArtistButton()])
+            Title("black-text-color", "Shuttle Smashers!"),
+            Nav({}, [TeamButton()])
         ]
     );
 }
