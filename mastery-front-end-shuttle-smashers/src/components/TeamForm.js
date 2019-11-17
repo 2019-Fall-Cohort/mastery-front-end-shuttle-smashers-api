@@ -1,15 +1,15 @@
 const Deact = require("../libs/deact");
 const Button = require("./Button");
 
-function ArtistForm() {
+function TeamForm() {
   function handleSubmit(event) {
     event.preventDefault();
 
-    const name = document.querySelector(".artist-name").value;
-    const recordLabel = document.querySelector(".artist-record-label").value;
-    const homeTown = document.querySelector(".artist-home-town").value;
+    const name = document.querySelector(".team-name").value;
+    const recordLabel = document.querySelector(".team-record-label").value;
+    const homeTown = document.querySelector(".team-home-town").value;
 
-    fetch(`http://localhost:8080/api/artists`, {
+    fetch(`http://localhost:8080/api/team`, {
       method: "Post",
       headers: {
         "Content-Type": "application/json"
@@ -23,35 +23,35 @@ function ArtistForm() {
       .then(response => {
         return response.json();
       })
-      .then(artist => {
-        console.log(artist);
+      .then(team => {
+        console.log(team);
       });
   }
 
   return Deact.create("form", { onsubmit: handleSubmit }, [
-    Deact.create("h5", {}, "Add Artist:"),
+    Deact.create("h5", {}, "Add Team:"),
     Deact.create(
       "input",
-      { class: "artist-name", placeholder: "Name", type: "text" },
+      { class: "team-name", placeholder: "Name", type: "text" },
       ""
     ),
     Deact.create(
       "input",
-      { class: "artist-image-url", placeholder: "Image Url", type: "text" },
+      { class: "team-image-url", placeholder: "Image Url", type: "text" },
       ""
     ),
     Deact.create(
       "input",
-      { class: "artist-record-label", placeholder: "Record Label", type: "text" },
+      { class: "team-record-label", placeholder: "Record Label", type: "text" },
       ""
     ),
     Deact.create(
       "input",
-      { class: "artist-home-town", placeholder: "Home Town", type: "text" },
+      { class: "team-home-town", placeholder: "Home Town", type: "text" },
       ""
     ),
     Button({ type: "submit" }, "Submit")
   ]);
 }
 
-module.exports = ArtistForm;
+module.exports = TeamForm;
