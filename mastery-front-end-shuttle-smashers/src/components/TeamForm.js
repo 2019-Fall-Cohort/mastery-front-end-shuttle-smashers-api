@@ -6,8 +6,8 @@ function TeamForm() {
     event.preventDefault();
 
     const name = document.querySelector(".team-name").value;
-    const recordLabel = document.querySelector(".team-record-label").value;
-    const homeTown = document.querySelector(".team-home-town").value;
+    const flagUrl = document.querySelector(".flag-url").value;
+    const gender = document.querySelector(".team-gender").value;
 
     fetch(`http://localhost:8080/api/team`, {
       method: "Post",
@@ -16,6 +16,7 @@ function TeamForm() {
       },
       body: JSON.stringify({
         name: name,
+        flagUrl: flagUrl,
         gender: gender
       })
     })

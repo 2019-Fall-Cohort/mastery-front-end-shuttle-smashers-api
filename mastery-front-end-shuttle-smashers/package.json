@@ -15,7 +15,6 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
   },
-  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers.api.git"
