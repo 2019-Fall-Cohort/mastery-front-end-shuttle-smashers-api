@@ -1,7 +1,7 @@
 const Deact = require("../libs/deact");
 
-function AlbumName(album) {
-    return Deact.create("section", { class: 'album-name-display' }, album.title);
+function PlayerName(player) {
+    return Deact.create("section", { class: 'player-name-display' }, player.name);
 }
 
-module.exports = AlbumName;
+module.exports = PlayerName;
