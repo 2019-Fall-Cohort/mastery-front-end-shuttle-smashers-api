@@ -1,6 +1,4 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+const Deact = require("./libs/deact");
+const App = require("./components/App");
 
-ReactDOM.render(<App />, document.getElementById('root'));
+Deact.render(App(), document.querySelector(".app"));
