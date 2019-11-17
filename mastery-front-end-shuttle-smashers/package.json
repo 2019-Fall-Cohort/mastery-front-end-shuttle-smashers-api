@@ -1,7 +1,11 @@
 {
-  "name": "shuttle smashers-frontend",
+  "name": "mastery-front-end-shuttle-smashers",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
   "dependencies": {
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
@@ -9,20 +13,18 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "webpack-dev-server --mode development --content-base docs/ --open --hot"
+    "start": "webpack-dev-server --mode development --content-base docs/ --open --hot",
   },
+  
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers-api.git"
+    "url": "git+https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers.api.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers.api/issues"
   },
-  "homepage": "https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers-api#readme",
-  "directories": {
-    "doc": "docs"
-  },
-  "description": ""
-}
+  "homepage": "https://github.com/2019-Fall-Cohort/mastery-front-end-shuttle-smashers.api#readme",
+ 
+
