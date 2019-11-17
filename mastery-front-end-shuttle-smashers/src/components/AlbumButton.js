@@ -1,22 +1,22 @@
 const Deact = require("../libs/deact");
 const Button = require("./button");
 const Http = require("../utils/http");
-const AlbumCard = require("./AlbumCard");
-const AlbumPage = require("./AlbumPage");
+const PlayerCard = require("./PlayerCard");
+const PlayerPage = require("./PlayerPage");
 
-function AlbumsButton(artist) {
-    function renderAlbums() {
+function PlayerButton(team) {
+    function renderPlayers() {
         document.querySelector(".content .container").innerHTML = "";
         Deact.render(
-            AlbumPage(artist),
+            PlayerPage(artist),
             document.querySelector(".content .container")
         );
-        Http.getRequest(`http://localhost:8080/api/artists/${artist.id}`,
-            function (artist) {
-                artist.albums.forEach(function (album) {
+        Http.getRequest(`http://localhost:8080/api/teams/${team.id}`,
+            function (team) {
+                team.albums.forEach(function (player) {
                     Deact.render(
-                        AlbumCard(album),
-                        document.querySelector(".album-cards")
+                        PlayerCard(player),
+                        document.querySelector(".player-cards")
                     );
                 });
             });
@@ -24,10 +24,10 @@ function AlbumsButton(artist) {
 
     return Button(
         {
-            class: "albums-button",
-            onclick: renderAlbums
+            class: "player-button",
+            onclick: renderPlayers
         },
-        "Albums"
+        "Players"
     );
 }
-module.exports = AlbumsButton;
+module.exports = PlayersButton;
