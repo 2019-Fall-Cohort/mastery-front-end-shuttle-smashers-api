@@ -1,7 +1,7 @@
 const Deact = require("../libs/deact");
 
-function AlbumCards() {
-    return Deact.create("section", { class: `album-cards` }, "");
+function PlayerCards() {
+    return Deact.create("section", { class: `player-cards` }, "");
 }
 
-module.exports = AlbumCards;
+module.exports = PlayerCards;

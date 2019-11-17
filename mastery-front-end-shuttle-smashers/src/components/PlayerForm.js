@@ -1,33 +1,33 @@
 const Deact = require("../libs/deact");
 const Button = require("./Button");
 
-function AlbumForm(id) {
+function PlayerForm(id) {
     function handleSubmit(event) {
         event.preventDefault();
 
-        const title = document.querySelector(".artist-albums").value;
+        const name = document.querySelector(".team-players").value;
 
-        fetch(`http://localhost:8080/api/artists/${id}/add-album`, {
+        fetch(`http://localhost:8080/api/teams/${id}/add-player`, {
             method: "PATCH",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                title: title,
+                name: name,
             })
         })
             .then(response => {
                 return response.json();
             })
-            .then(album => {
-                console.log(album);
+            .then(player => {
+                console.log(player);
             });
     }
     return Deact.create("form", { onsubmit: handleSubmit }, [
-        Deact.create("h5", {}, "Add Album:"),
+        Deact.create("h5", {}, "Add Player:"),
         Deact.create(
             "input",
-            { class: "artist-albums", placeholder: "Album", type: "text" },
+            { class: "team-players", placeholder: "Player", type: "text" },
             ""
         ),
         Button({ type: "submit" }, "Submit")
@@ -35,4 +35,4 @@ function AlbumForm(id) {
     ]);
 }
 
-module.exports = AlbumForm;
+module.exports = PlayerForm;
