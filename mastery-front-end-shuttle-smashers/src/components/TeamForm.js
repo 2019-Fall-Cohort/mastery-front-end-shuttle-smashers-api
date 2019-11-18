@@ -1,5 +1,6 @@
 const Deact = require("../libs/deact");
 const Button = require("./Button");
+const Select = require("./Select");
 
 function TeamForm() {
   function handleSubmit(event) {
@@ -40,17 +41,12 @@ function TeamForm() {
       { class: "flag-url", placeholder: "flag Url", type: "text" },
       ""
     ),
+    Select(),
     // Deact.create(
-    //   "select",
-    //   { class: "team-gender", name: "genderField", id: "gender-dropdown",
-    //     },
-
-    // )
-    Deact.create(
-      "input",
-      { class: "team-gender", placeholder: "Gender", type: "text" },
-      ""
-    ),
+    //   "input",
+    //   { class: "team-gender", placeholder: "Gender", type: "text" },
+    //   ""
+    // ),
     Button({ type: "submit" }, "Submit")
   ]);
 }
