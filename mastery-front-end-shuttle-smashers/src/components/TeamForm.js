@@ -8,7 +8,7 @@ function TeamForm() {
 
     const name = document.querySelector(".team-name").value;
     const flagUrl = document.querySelector(".flag-url").value;
-    const gender = document.querySelector(".team-gender").value;
+    const gender = document.querySelector(".gender-select").value;
 
     fetch(`http://localhost:8080/api/teams/add-team`, {
       method: "POST",
@@ -42,6 +42,7 @@ function TeamForm() {
       ""
     ),
     Select(),
+
     // Deact.create(
     //   "input",
     //   { class: "team-gender", placeholder: "Gender", type: "text" },
