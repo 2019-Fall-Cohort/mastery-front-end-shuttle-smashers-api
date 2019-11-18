@@ -13,7 +13,7 @@ function PlayerButton(team) {
         );
         Http.getRequest(`http://localhost:8080/api/teams/${team.id}`,
             function (team) {
-                team.player.forEach(function (player) {
+                team.players.forEach(function (player) {
                     Deact.render(
                         PlayerCard(player),
                         document.querySelector(".player-cards")
