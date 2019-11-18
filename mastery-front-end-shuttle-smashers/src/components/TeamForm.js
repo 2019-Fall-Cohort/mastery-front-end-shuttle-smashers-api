@@ -1,5 +1,6 @@
 const Deact = require("../libs/deact");
 const Button = require("./Button");
+const Select = require("./Select");
 
 function TeamForm() {
   function handleSubmit(event) {
@@ -7,9 +8,9 @@ function TeamForm() {
 
     const name = document.querySelector(".team-name").value;
     const flagUrl = document.querySelector(".flag-url").value;
-    const gender = document.querySelector(".team-gender").value;
+    const gender = document.querySelector(".gender-select").value;
 
-    fetch(`http://localhost:8080/api/teams`, {
+    fetch(`http://localhost:8080/api/teams/add-team`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -40,11 +41,13 @@ function TeamForm() {
       { class: "flag-url", placeholder: "flag Url", type: "text" },
       ""
     ),
-    Deact.create(
-      "input",
-      { class: "team-gender", placeholder: "Gender", type: "text" },
-      ""
-    ),
+    Select(),
+
+    // Deact.create(
+    //   "input",
+    //   { class: "team-gender", placeholder: "Gender", type: "text" },
+    //   ""
+    // ),
     Button({ type: "submit" }, "Submit")
   ]);
 }
