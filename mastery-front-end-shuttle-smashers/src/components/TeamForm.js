@@ -9,8 +9,8 @@ function TeamForm() {
     const flagUrl = document.querySelector(".flag-url").value;
     const gender = document.querySelector(".team-gender").value;
 
-    fetch(`http://localhost:8080/api/team`, {
-      method: "Post",
+    fetch(`http://localhost:8080/api/teams`, {
+      method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
