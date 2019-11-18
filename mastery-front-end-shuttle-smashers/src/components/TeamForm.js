@@ -40,6 +40,12 @@ function TeamForm() {
       { class: "flag-url", placeholder: "flag Url", type: "text" },
       ""
     ),
+    // Deact.create(
+    //   "select",
+    //   { class: "team-gender", name: "genderField", id: "gender-dropdown",
+    //     },
+
+    // )
     Deact.create(
       "input",
       { class: "team-gender", placeholder: "Gender", type: "text" },
